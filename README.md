@@ -134,6 +134,6 @@ npm run dev
 | 이름 | 이메일 | 담당 |
 |------|--------|------|
 | **성도범** | sdb0605@naver.com | Project Manager, LLM+RAG 개발 |
-| **권태현** | hyeonseo0524@naver.com | 프론트엔드 개발 및 기획 |
+| **권태현** | tgwon0947@gmail.com | 프론트엔드 개발 및 기획 |
 | **정중환** | wwat1313@gmail.com | 서버, 백엔드 개발 |
 | **카트로브 아딜렛** | adilet.kadyrov@outlook.com | LightGBM 모델 개발 |

@@ -130,3 +130,11 @@ npm run dev
 ## 👥 팀
 
 부산대학교 ACCS Lab · DIVE 2026 해커톤 (부산교통공사 × 짐캐리 트랙)
+> **Team KGL** · 지도교수: 최윤호 교수님
+
+| 이름 | 이메일 | 담당 |
+|------|--------|------|
+| **성도범** | sdb0605@naver.com | Project Manager, LLM+RAG 개발 |
+| **권태현** | hyeonseo0524@naver.com | 프론트엔드 개발 및 기획 |
+| **정중환** | wwat1313@gmail.com | 서버, 백엔드 개발 |
+| **카트로브 아딜렛** | adilet.kadyrov@outlook.com | LightGBM 모델 개발 |

@@ -1,0 +1,24 @@
+Station: 덕천
+  ID: 233, Line: 2호선, Original Name: 덕천
+  ID: 313, Line: 3호선, Original Name: 덕천
+
+Station: 동래
+  ID: 125, Line: 1호선, Original Name: 동래
+  ID: 402, Line: 4호선, Original Name: 동래
+
+Station: 미남
+  ID: 309, Line: 3호선, Original Name: 미남
+  ID: 401, Line: 4호선, Original Name: 미남
+
+Station: 서면
+  ID: 119, Line: 1호선, Original Name: 서면
+  ID: 219, Line: 2호선, Original Name: 서면
+
+Station: 수영
+  ID: 208, Line: 2호선, Original Name: 수영
+  ID: 301, Line: 3호선, Original Name: 수영
+
+Station: 연산
+  ID: 123, Line: 1호선, Original Name: 연산
+  ID: 305, Line: 3호선, Original Name: 연산
+

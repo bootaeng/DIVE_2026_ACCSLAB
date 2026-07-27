@@ -1,0 +1,57 @@
+# Per-component hyperparameters. Populated as each component is built
+# (Phases 3-5). Placeholders documented now so the shape is agreed early.
+
+congestion:
+  # Component A — LightGBM primary forecaster
+  lightgbm:
+    objective: regression
+    num_leaves: 31
+    learning_rate: 0.05
+    n_estimators: 500
+  # Component A (showcase) — Temporal Fusion Transformer, Phase 9
+  tft:
+    enabled: false
+    max_encoder_length: 168     # 7 days of hourly history
+    max_prediction_length: 24   # next 24 hours
+
+event_detection:
+  # Component A' — STL decomposition + residual anomaly scoring
+  method: stl_residual_zscore
+  z_threshold: 2.5
+
+conflict_score:
+  # Component B — transparent weighted index, not a trained model.
+  # luggage_load_estimate is wired through the formula but weighted at
+  # 0.0: no dataset ties actual 짐캐리 luggage volume to a station/hour
+  # today, so estimating it would be fabricated, not measured. Bump
+  # this weight (and add a real estimator) once a luggage-flow dataset
+  # exists; the other three weights redistribute the remaining budget
+  # and are computed from real Phase 1 data (elevators.csv,
+  # elevator_alt_routes.csv) plus Component A's congestion forecast.
+  weights:
+    predicted_elevator_demand: 0.5
+    luggage_load_estimate: 0.0
+    capacity_inverse: 0.3
+    alt_route_unavailable_penalty: 0.2
+
+routing:
+  # Component C — multi-criteria A*/Dijkstra weights
+  cost_weights:
+    time: 0.5
+    accessibility_risk: 0.35
+    conflict_score: 0.15
+  complexity_classifier:
+    # GBM classifier trained on labeled 대체경로 data
+    algorithm: gradient_boosting
+    n_estimators: 200
+    max_depth: 4
+
+persona:
+  # Component E — GMM segment clustering + transferred Jeju classifier
+  gmm:
+    n_components: 4
+    covariance_type: full
+
+facility:
+  # Component F — geospatial nearest-neighbor + rule ranking
+  max_detour_minutes: 10

@@ -1,0 +1,46 @@
+{
+  "feature_columns": [
+    "station_id",
+    "direction",
+    "hour_of_day",
+    "weekday_index",
+    "is_weekend",
+    "is_holiday",
+    "is_event_spike",
+    "lag_1d_count",
+    "lag_7d_count",
+    "rolling_mean_7d",
+    "rolling_mean_28d"
+  ],
+  "categorical_columns": [
+    "station_id",
+    "direction"
+  ],
+  "metrics": {
+    "mae": 31.649156143116997,
+    "mape": 18.157939311770832
+  },
+  "n_train": 1849344,
+  "n_valid": 112896,
+  "params": {
+    "boosting_type": "gbdt",
+    "colsample_bytree": 1.0,
+    "importance_type": "split",
+    "learning_rate": 0.05,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 500,
+    "num_leaves": 31,
+    "objective": "regression",
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0,
+    "subsample": 1.0,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 0,
+    "verbosity": -1
+  },
+  "baseline_filename": "lightgbm_congestion_v1_baselines.csv",
+  "saved_at": "2026-07-22T13:15:51.019772"
+}

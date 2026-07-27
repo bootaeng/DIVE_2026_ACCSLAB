@@ -1,0 +1,25 @@
+environment: development
+
+paths:
+  data_dir: data
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  external_dir: data/external
+  artifacts_dir: artifacts
+
+network:
+  station_count: 114
+  lines: ["1호선", "2호선", "3호선", "4호선"]
+
+feature_flags:
+  use_tft_showcase: false
+  use_external_weather: false
+  use_external_events: false
+
+features:
+  # Trailing-window sizes (days) for FeatureStore's rolling_mean_{w}d
+  # columns. Lag days (same hour yesterday / same hour last week) are
+  # fixed at 1 and 7 to match AI_Pipeline_Strategy.md's feature plan —
+  # not config-driven since they're a specific, deliberate choice.
+  rolling_windows_days: [7, 28]

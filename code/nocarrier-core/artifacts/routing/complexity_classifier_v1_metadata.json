@@ -1,0 +1,32 @@
+{
+  "feature_columns": [
+    "line_no",
+    "is_terminal",
+    "is_transfer",
+    "platform_type",
+    "start_type",
+    "end_type",
+    "start_level",
+    "end_level"
+  ],
+  "categorical_columns": [
+    "is_terminal",
+    "is_transfer",
+    "platform_type",
+    "start_type",
+    "end_type"
+  ],
+  "classes": [
+    "단순",
+    "보통",
+    "복잡",
+    "이동 불가"
+  ],
+  "metrics": {
+    "accuracy": 0.893048128342246,
+    "macro_f1": 0.7749892996941659
+  },
+  "n_train": 745,
+  "n_test": 187,
+  "saved_at": "2026-07-22T13:28:07.011600"
+}
